@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <title>AYUSH</title>
+     <!--
+
+
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <!-- Main css -->
+     <link rel="stylesheet" href="css/style.css">
+     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+
+     <div class="preloader">
+          <div class="sk-spinner sk-spinner-wordpress">
+               <span class="sk-inner-circle"></span>
+          </div>
+     </div>
+
+     <!-- Navigation section  -->
+
+     <div class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+                    <a href="index.html" class="navbar-brand">AYUSH & ADITYA</a>
+               </div>
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                    </ul>
+               </div>
+
+          </div>
+     </div>
+
+     <!-- Home Section -->
+
+     <section id="home" class="main-home parallax-section">
+          <div class="overlay"></div>
+          <div id="particles-js"></div>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <h1>Hello! This is Ayush & Aditya.</h1>
+                         <h4>CTF FLAG CAPTURE</h4>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- Blog Section -->
+
+     <section id="blog">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                         <div class="blog-post-thumb">
+                              <div class="blog-post-image">
+                                   <a href="single-post.html">
+                                        <img src="images/blog-image1.jpg" class="img-responsive" alt="Blog Image">
+                                   </a>
+                              </div>
+                              <div class="blog-post-title">
+                                   <h3><a href="single-post.html">This website is Designed by Ayush and Aditya </a></h3>
+                              </div>
+
+                              <div class="blog-post-des">
+                                   <p>Own CTF setup project</p>
+
+                              </div>
+                         </div>
+
+                    </div>
+                    <div class="col-md-offset-1 col-md-10 col-sm-12">
+                        
+                              <div class="blog-post-title">
+                                   <h3><a href="single-post.html">About Mr-Robot: 1 (Description from the site)</a></h3>
+                              </div>
+                              <div class="blog-post-image">
+                                   <a href="single-post.html">
+                                        <img src="images/i1.jpg" class="img-responsive" alt="Blog Image">
+                                   </a>
+                              </div>
+
+                              <div class="blog-post-des">
+                                   <p>Based on the show, Mr. Robot.
+                                        This VM has three keys hidden in different locations. Your goal is to find all
+                                        three. Each key is progressively difficult to find.
+                                        The VM isn’t too difficult.
+                                      </p>
+
+                              </div>
+                              
+                              <div class="blog-post-title">
+                                   <h3><a href="single-post.html">My Lab Setup</a></h3>
+                              </div>
+
+                              <div class="blog-post-des">
+                                   <p>I am running a Windows OS with Oracle Virtualbox installed. For this specific
+                                        exercise, I have 2 virtual machines. The first is a Kali linux VM allocated with
+                                        4gb of RAM, 3vcpu and a 25gb hdd. The second is the virtual machine for
+                                        Mr-Robot: 1. I am using the default resource allocation defined in the ova
+                                        which is 1vcpu and 512MB of RAM. I have created a host-only network with DHCP
+                                        enabled attached to these VMs. I have further configured a firewall rule on my
+                                        host machine’s to disallow any inbound or outbound traffic from this network.
+                                        This is done to eliminate any noise from my host, and also to protect my host
+                                        machine from the activities on these VMs. Begin by booting up both VMs.
+
+                                        For the sake of simplicity, from now on, I will be addressing the Mr-Robot:1 VM
+                                        as the ‘target’</p>
+
+                              </div>
+                              <div class="blog-post-title">
+                                   <h3><a href="single-post.html">Ground Rules</a></h3>
+                              </div>
+
+                              <div class="blog-post-des">
+                                   <p>For the purposes of simulating a real-world scenario, the Mr-Robot: 1 VM will not
+                                        be accessed directly via it’s VM console, nor would it’s operation be
+                                        interrupted using virtualbox VM controls. The only way to access it, will be
+                                        from the attack platform, which in my case is the Kali Linux VM.</p>
+
+                              </div>
+                              <div class="blog-post-title">
+                                   <h3><a href="single-post.html">Reconnaissance</a></h3>
+                              </div>
+                              <div class="blog-post-image">
+                                   <a href="single-post.html">
+                                        <img src="images/i2.jpg" class="img-responsive" alt="Blog Image">
+                                   </a>
+                              </div>
+
+                              <div class="blog-post-des">
+                                   <p>Network & Host
+                                        To begin with, I need to find the target’s ip address. The kali VM’s ip address
+                                        is 192.168.115.5. Running an nmap scan on the local subnet shows 4 devices on
+                                        the network including the kali VM. 192.168.115.1 is the host machine &
+                                        192.168.115.2 is the virtualbox dhcp server. The final ip address 192.168.115.4,
+                                        belongs to our target. The nmap scan also shows 2 open ports, 80 for http & 443
+                                        for https. A 3rd port, 22 for ssh is shown closed. That eliminates any easy way
+                                        into ssh-ing into the target. The open ports could mean that the target is
+                                        hosting a website.</p>
+
+                              </div>
+                              <div class="blog-post-title">
+                                   <h3><a href="single-post.html">Website</a></h3>
+                              </div>
+                              <div class="blog-post-image">
+                                   <a href="single-post.html">
+                                        <img src="images/i3.jpg" class="img-responsive" alt="Blog Image">
+                                   </a>
+                              </div>
+
+                              <div class="blog-post-des">
+                                   <p>To check the website hosted on the target, I fire up a browser and enter http://
+                                        followed by the ip address of the target and hit go. Sure enough, a website
+                                        opens up with an animation displayed in reference to the tv series Mr Robot. The
+                                        animation ends at a screen which resembles a linux terminal with a blinking
+                                        cursor. A list of commands that could be entered is provided. The animation
+                                        screen is interactive. Entering any of the commands initiates a new animation or
+                                        a gallery of image , at the end of which I am brought back to the
+                                        animated-interactive-terminal-looking screen. I try out all the commands with
+                                        the same result. Trying the url with https:// also yields the same result.</p>
+                                   <div class="blog-post-des">
+                                        <p>Checking the source provides no additional clues. The js scripts are a
+                                             dead-end too.
+                                        </p>
+                                        <div class="blog-post-image">
+                                             <a href="single-post.html">
+                                                  <img src="images/i4.jpg" class="img-responsive" alt="Blog Image">
+                                             </a>
+                                        </div>
+
+
+                                   </div>
+                                   <div class="blog-post-title">
+                                        <h3><a href="single-post.html">Web Directory Enumeration</a></h3>
+                                   </div>
+
+                                   <div class="blog-post-des">
+                                        <p>The Process
+                                             I begin web directory enumeration using nmap with -script switch and the
+                                             script as http-enum. This took a couple of minutes to complete. Once
+                                             complete, the result was a list of working sub-directories associated with
+                                             the website hosted on the target.
+                                             The Result
+
+
+                                        </p>
+
+                                   </div>
+                                   
+                                   <div class="blog-post-title">
+
+                                   </div>
+
+                                   <div class="blog-post-des">
+                                        <p></p>
+
+                                   </div>
+                                   <div class="blog-post-title">
+                                        <h3><a href="single-post.html">Brute-force Attack</a></h3>
+                                   </div>
+
+                                   <div class="blog-post-des">
+                                        <p>To gain access to the wordpress admin panel, I need both the username and
+                                             password. Since I have neither, I attempted to brute-force my way in. I
+                                             used the word-list fsocity.dic I receive previously. There are a total of
+                                             858,160 words within this list. If I were to try to use the list for both
+                                             the username and password on a single go, that would be a total of
+                                             736,438,585,600 attempts, which would take a long, long time to complete.
+                                             Fortunately, wordpress login page responds differently when an incorrect
+                                             username is entered vs a correct username, regardless of correctness of the
+                                             combination of the username and password.</p>
+                                        <p>username
+                                             I used hydra to brute-force the username using the file fsocity.dic and and
+                                             a single word password. The parameter used can be derived from the source
+                                             of the wp-login page. The username field is ‘log’ and password field is
+                                             ‘pwd’. The response I tested against is “Invalid”.</p>
+                                        <p>I have also allowed for 64 threads to run simultaneously. Based on these, the
+                                             process would have taken ~ 5 hours to complete. Fortunately, the correct
+                                             username happened to be in the first couple hundred words in the word-list.
+                                             Since the username is not case-sensitive, I should get at least 3 correct
+                                             responses if hydra is allowed to run through the complete word-list.
+
+                                        </p>
+                                        <p>On trying the username received, with an incorrect password on the wp-login
+                                             page, I see that the page response is now different.</p>
+                                        <p>password
+
+                                             To brute-force the password, I could continue to use hydra. But for the
+                                             sake of demonstration, I will describe how it could be done using a
+                                             different tool named wpscan. Do note that the username too could have been
+                                             brute-forced with wpscan.</p>
+                                        <p>The command displayed above uses the username received previously, along with
+                                             the wordlist fsocity.dic for the password. I have chosen 10,000 threads to
+                                             run this brute-force. On running this, the application lists out more
+                                             details on the wordpress instance running in the remote server, along with
+                                             a list of vulnerabilities that can be used to exploit it. Depending on your
+                                             system resource allocated to your attack platform, the process can take a
+                                             couple of hours. Fortunately for me, wpscan was able to find a valid
+                                             combination in 34 minutes.</p>
+                                        <p>Using the username and password received from the brute-force exercise, I was
+                                             able to login to the wp-admin page.
+
+                                        </p>
+                                        <p>On inspection of the Users page, I find that the credential obtained is
+                                             indeed the credential of the administrator for this wordpress instance. I
+                                             checked every section for any additional clues, but couldn’t find anything
+                                             of relevance. To proceed further, I will exploit the wordpress
+                                             administrator access I have received and it’s ability to modify the page
+                                             code.</p>
+
+                                   </div>
+                                   <div class="blog-post-title">
+                                        <h3><a href="single-post.html">Reverse Shell</a></h3>
+                                   </div>
+
+                                   <div class="blog-post-des">
+                                        <p>Reverse shell is form of attack where the target system is induced to connect
+                                             to our attack system, and forwards it’s shell to us to access. To execute
+                                             this for wordpress, I searched and found an article which demonstrates this
+                                             with few line of code which would work perfectly. The code executes bash
+                                             and have it directed to the attacker ip address on port 443. The modified
+                                             code looks like this:</p>
+                                        <p>The article describes a way to create a plug-in with the code mentioned and
+                                             have it uploaded into the wpadmin plug-in page and have it executed. This
+                                             really isn’t necessary in this case. A simpler way to execute this is to
+                                             paste and save the code into the header code within the appearance section
+                                             of the wpadmin console.</p>
+                                        <p>Once this is done and saved, I open up a terminal and type in nc -lvp 443 to
+                                             listen for connection attempt from the target machine.
+
+                                        </p>
+                                        <p>I open up a browser and simply attempt to open a non-existent url folder on
+                                             the target ip.</p>
+                                        <p>This initiates the session and give limited shell access on the target with
+                                             user ‘daemon’.</p>
+                                        <p>Within this shell I am unable to access much or switch to another user, but I
+                                             can navigate some of the file system. I navigate to /home directory and
+                                             found a directory for the user robot. Within this directory, there are 2
+                                             files. One is the 2nd key to this box. The second file is a md5 password
+                                             hash for the user robot. The file permission for the file key-2-of-3.txt
+                                             does not allow read access except by the user robot. The password.raw-md5
+                                             file on the other hand can be read. I cat out the file, copied the hash
+                                             string and had it reversed from here. The result obtained is the password
+                                             for the user robot.</p>
+
+
+
+
+                                   </div>
+                                   <div class="blog-post-title">
+                                        <h3><a href="single-post.html">Spawn a TTY Shell</a></h3>
+                                   </div>
+
+                                   <div class="blog-post-des">
+                                        <p>In order to switch to user robot, I need to escape the limited shell and
+                                             spawn a tty session. In order to do this, I referred this page which lists
+                                             a number of methods to spawn a tty shell. I used the first method listed
+                                             and switch to the user robot using the password received earlier. I
+                                             navigated to the robot home folder as before and was able to cat out the
+                                             second key for the box.</p>
+
+                                   </div>
+                                   <div class="blog-post-title">
+                                        <h3><a href="single-post.html">Privileged Escalation</a></h3>
+                                   </div>
+
+                                   <div class="blog-post-des">
+                                        <p>I now have a basic user access on the box, but that isn’t gonna be enough
+                                             since the 3rd key isn’t available with the current access level as robot. I
+                                             need to gain root privilege. There are many way to go about this. For this
+                                             box, the strategy that worked was to locate an executable with suid bit
+                                             enabled and use it run root-level commands. To locate files with suid bit
+                                             set, I used the ‘find’ command with query parameters for file permission
+                                             set as 4000. This generated a list of possible files. One of them is the
+                                             executable nmap.</p>
+                                        <p>Earlier versions of nmap had an interactive mode, which allowed execution of
+                                             shell command within the interactive mode. Fortunately, the version on this
+                                             box allowed it. I entered the interactive mode, and open a new shell. On
+                                             checking the user identity, I find that I am now functioning as root.
+
+                                        </p>
+                                        <p>To retrieve the 3rd key, I searched for a file which has name beginning with
+                                             ‘key-3-’. The 3rd key file is located in the root directory. Cating out the
+                                             file provides the 3rd and final key to the box.</p>
+                                        <p>This ends the challenge. Thank you for reading this write-up. Stay tuned and
+                                             follow me on twitter to receive updates on more write-ups such as this.</p>
+
+                                   </div>
+                                   
+                                   
+                                   
+                              </div>
+
+                         </div>
+
+
+                    </div>
+               </div>
+     </section>
+
+     <!-- Footer Section -->
+
+     <footer>
+          <div class="container">
+               <div class="row">
+
+                    
+
+                    <div class="col-md-4 col-md-offset-1 col-sm-6">
+                         <h3>Talk to us</h3>
+                         <p><i class="fa fa-globe"></i> VIT BHOPAL </p>
+                         <p><i class="fa fa-phone"></i> AYUSH :8700893543 &  Aditya : 8329063700 </p>
+                         <p><i class="fa fa-save"></i> ayush.sharma2020@vitbhopal.ac.in &  aditya.dadasaheb2020@vitbhopal.ac.in</p>
+                    </div>
+
+                    <div class="clearfix col-md-12 col-sm-12">
+                         <hr>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12">
+                         <ul class="social-icon">
+                              <li><a href="https://www.linkedin.com/in/ayush-s-abb331128/" class="fa fa-linkedin"></a></li>
+                              <li><a href="https://github.com/meetayush2016/CTF-Arena" class="fa fa-github"></a></li>
+                         </ul>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <!-- Back top -->
+     <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+     <!-- SCRIPTS -->
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/particles.min.js"></script>
+     <script src="js/app.js"></script>
+     <script src="js/jquery.parallax.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+
+</html>
